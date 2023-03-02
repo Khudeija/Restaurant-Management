@@ -53,7 +53,7 @@ class Register:
             messagebox.showerror("Error","All Fields are required", parent=self.root)
         else:
             try:
-                con=pymysql.connect(host="localhost", user="root", password="zahra317", database="restaurant")
+                con=pymysql.connect(host="localhost", user="root", password="", database="restaurant")
                 cur=con.cursor()
                 cur.execute("select * from users where email=%s and password=%s", (self.txt_email.get(), self.txt_password.get()))
                 row=cur.fetchone()
