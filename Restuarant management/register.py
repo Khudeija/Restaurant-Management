@@ -87,7 +87,7 @@ class Register:
             messagebox.showerror("Error", "Please Agree to the Terms and Conditions", parent=self.root)
         else:
             try:
-                con=pymysql.connect(host="localhost", user="root", password="zahra317", database="restaurant")
+                con=pymysql.connect(host="localhost", user="root", password="", database="restaurant")
                 cur=con.cursor()
                 cur.execute("select * from users where email=%s", self.txt_email.get())
                 row=cur.fetchone()
