@@ -483,7 +483,7 @@ def save():
 
 
         try:
-            con = pymysql.connect(host="localhost", user="root", password="zahra317", database="restaurant")
+            con = pymysql.connect(host="localhost", user="root", password="", database="restaurant")
             cur = con.cursor()
             cur.execute("insert into orders values (%s,%s,%s,%s,%s,%s)",
                         (x,
